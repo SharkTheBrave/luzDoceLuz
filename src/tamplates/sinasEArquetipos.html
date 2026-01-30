@@ -1,0 +1,403 @@
+<html>
+<head>
+    <title>Sinas e Arquétipos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="src/Styles/ResetAll.css">
+    <link rel="stylesheet" type="text/css" href="src/Styles/sinasEArquetipos/Body.css">
+    <link rel="stylesheet" type="text/css" href="src/Styles/sinasEArquetipos/HeaderFooter.css">
+
+    <script src="src/js/mostrar.js"></script>
+
+</head>
+<body>
+  <div class="container">      
+    <div><h2>Sinas e Arquétipos:</h2>
+    <p>
+      Da mesma forma que o mestre precisa existir no mundo como um narrador, o jogador precisa existir no mundo por meio
+      de um avatar, um personagem. Mas como equilibrar até onde você vai? Como saber até onde o que você precisa fazer é
+      realmente possível? Você não é o ser mais fraco existente, mas também não é o mais poderoso. A ficha de personagem
+      serve justamente para te orientar no que você é bom, ruim, mediano, pontuar o que você pode ou não fazer com as
+      habilidades que você tem e a combinação das habilidades múltiplas dadas a você pelo seu duro sacrifício em
+      treinamento.
+      
+      </p>
+      <button onclick="mostrarEtapa('sina', 'arquetipo')">Passo 1 - Arquétipo</button> 
+      <button onclick="mostrarEtapa('arquetipo', 'sina')">Passo 2 - Sina</button>
+    </div>
+    <div>           
+      <div class="step active" id="arquetipo">
+        <h2>Passo 1, Arquétipo: </h2>
+        <p>Todo personagem tem um arquétipo, seja bom, ruim, agradável ou não, e isso define em que você focou sua vida, em
+          que você focou sua juventude, você foi um antissocial que comia livros no café da manhã? ou uma líder de torcida que
+          precisa sempre ser linda e perfeita pra agradar os que estão próximos a você?<br>
+          Não se preeucupe, sempre há um arquetipo que se encaixe com o seu personagem, veja mais pressionando o botão abaixo. </p>
+
+            <h2>Arquétipos:</h2>
+              <div class="row" >
+                  <div>
+                    <h3>Líder:</h3>
+                    <table class="hidden" id="lider" name="líder">
+                      <tr>
+                        <td>
+                          Sempre cercado de amigos fieis, as vezes dois amigos, as vezes mais de quinze, mas sempre fieis, o
+                            cara que procuram quando tem problemas em relacionamento, quando precisam entender o lado da outra pessoa
+                            numa discussão, ou até quando querem ter seu argumento validado. Caracteristica de quem gosta de ajudar os
+                            aliados.
+                            <br>Recebe a habilidade:
+                            <br><br>Inspiração. Enquanto seus amigos estiverem escutando suas palavras de apoio, eles se enchem de esperança
+                            e recebem 1d4(por nível de habilidade) a mais em rolagens de qualquer tipo.        
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="verLider" onclick="mostrarMaisEMenos('lider','verLider')">Ver líder</button>
+
+                    <h3>Atleta:</h3>
+                    <table class="hidden" id="atleta" name="atleta">
+                      <tr>
+                        <td>
+                          Focado nos esportes, com uma grande determinação pra vencer, sempre quer competir com quem é mais
+                            forte que ele, mesmo que seja apenas em sua cabeça, sempre existe uma disputa silenciosa.
+                            Caracteristica de quem gosta de ser melhor a cada dia e se diverte mostrando o máximo que seu corpo consegue
+                            fazer.
+                            <br>Recebe a habilidade:
+                            <br><br>foco de luta: Consegue furar a esquiva e acertar diretamente na defesa, perdendo 5 (menos 1 a cada nível
+                            de habilidade) no dado de acerto.                      
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="verAtleta" onclick="mostrarMaisEMenos('atleta','verAtleta')">Ver atleta</button>
+                    
+                    <h3>Nerd:</h3>
+                    <table class="hidden" id="nerd" name="nerd">
+                      <tr>
+                        <td>
+                          Focado em coisas tecnologicas e conhecimentos gerais, o nerd é o investigador e inventor do grupo,
+                            se precisar de alguém para fazer pesquisas ele é o cara pra isso.
+                            Caracteristica de quem gosta de buscar conhecimento como uma grande prioridade e até forma de se divertir.
+                            <br>Recebe a habilidade:
+                            <br><br>Inventor: consegue criar itens mágicos e tecnológicos, consegue entender itens e guardar suas
+                            arquiteturas consigo para reproduzir seus efeitos em um equipamento mágico ou tecnológico. Pode guardar 2
+                            efeitos (mais 1 pra cada nível de habilidade), pode colocar um efeito em um item (mais um para cada nível de
+                            habilidade).              
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="verNerd" onclick="mostrarMaisEMenos('nerd','verNerd')">Ver nerd</button>
+
+                    <h3>Popular:</h3>
+                    <table class="hidden" id="popular" name="popular">
+                      <tr>
+                        <td>
+                          Alguém que sempre tem amigos por perto, um monte deles, todos morrem de vontade de servir você e
+                            assim se sentir parte da casta onde você se encontra, um pedestal que eles mesmos te colocaram.
+                            Caracteristica de quem gosta de ter pessoas por perto que te façam se sentir confortável.
+                            <br>Recebe a habilidade:
+                            <br><br>Súditos: tem vantagem em testes de carisma e pode montar equipes de ajudantes para manter consigo, você
+                            pode controlar equipes de 2 criaturas (mais 1 para cada nível de habilidade), que tiverem mais que 1 de
+                            inteligência e forem submissas a você, para servirem como seus escudeiros.
+                          
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="verPopular" onclick="mostrarMaisEMenos('popular','verPopular')">Ver popular</button>
+
+                    <h3>Rebelde:</h3>
+                    <table class="hidden" id="rebelde" name="rebelde">
+                      <tr>
+                        <td>
+                          Especialista em desobedecer o sistema, um grupo com um rebelde tem um ponto de vista distinto em
+                            todas as situações, realmente um ser do contra. Caracteristica de quem Busca pela própria liberdade e acha
+                            inaceitável o sistema onde alguém é maior que ele em poder.
+                            <br>Recebe a habilidade:
+                            <br><br>Teimosia: não pode ser enfeitiçado, amedrontado, controlado e tem vantagem em testes de morte e de
+                            resistência, também recebe mais 1 de defesa extra por nível(mais 1 por nível de habilidade).
+                          
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="verRebelde" onclick="mostrarMaisEMenos('rebelde','verRebelde')">Ver rebelde</button>
+
+                    <h3>Desbravador:</h3>
+                    <table class="hidden" id="desbravador" name="desbravador">
+                      <tr>
+                        <td>
+                          Um ser que sempre busca novas experiências, ele está sempre fazendo algo diferente as
+                            vezes até estranho, suas aventuras lhe forneceram habilidades que os outros não tinham, ele sabe um pouco de
+                            tudo. De repente ele começa a faltar um monte de aulas sem avisar nada pra ninguém, volta uma semana antes
+                            das provas dizendo que foi junto do tio pra mata comer fruta, acampar e fazer fogueira. Caracteristica de
+                            quem busca se tornar cada vez mais experiente, cada vez mais aventurado e com mais histórias pra contar.
+                            <br>Recebe a habilidade:
+                            <br><br>Bem Aventurado: Recebe o dobro do modificador de proficiência em 1 atributo ( mais 1 por nível de
+                            habilidade) a escolha, além disso, ganha metade da proficiência em todas as habilidades que não for
+                            proficiente.
+                          
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="verDesbravador" onclick="mostrarMaisEMenos('desbravador','verDesbravador')">Ver desbravador</button>
+
+                    <h3>Brigão:</h3>
+                    <table class="hidden" id="brigao" name="brigão">
+                      <tr>
+                        <td>
+                          É aquele personagem que impõe sua presença intimidante e muitas vezes usa a força física para
+                            resolver problemas. Ele pode ser o típico valentão da escola, o grandalhão que gosta de mostrar poder ou até
+                            mesmo o encrenqueiro de rua. Sempre com um grupo, como um bando de animais carnívoros prontos pra atacar.
+                            Caracteristica de quem, por qualquer motivo que seja, busque resolver os problemas por meio de força bruta
+                            ou assustando os outros.
+                            <br>Recebe a habilidade:
+                            <br><br> Fúria animal: Torna o usuário mais forte (uma vez por batalha) conseguindo mais 2 de dano em armaduras
+                            ou mais 1 de dano na vida, uma vez por dia (mais 1 vez por nível de habilidade), além disso, recebe uma das
+                            seguintes habilidades animais em área, sendo o raio de alcance 1,5 metros (mais 1,5 por nível de
+                            habilidade):
+                            <table border=1>
+                              <tr>
+                                <td>
+                                  <list>
+                                    <li> Aura do Leão: Empenha-se em se mostrar melhor em caçadas em equipe: como ação bônus pode usar o rugido
+                                      para aumentar a defesa de todos os aliados em 1 até que acabe a fúria.</li>
+                
+                                    <li>Aura do Lobo: Empenha-se em usar a vantagem numérica contra o oponente, enquanto sua equipe estiver
+                                    flanqueado um oponente, eles tem mais em bônus de acerto contra o inimigo flanqueado se o mesmo estiver
+                                    dentro da sua área de fúria.</li>
+                
+                                    <li>Aura do Gorila: Empenha-se em ataques corpo a corpo explosivos poderosos, toda vez que atacar um oponente,
+                                        os aliados dentro da área de efeito podem fazer um ataque desarmado como reação.</li>
+                
+                                    <li>Aura da coruja: Empenha-se em alertar perigos e proteger seus amigos, oferece vantagem em qualquer teste
+                                        de resistência aos aliados dentro da área de efeito.</li>
+                
+                                    <li>Aura da Hiena: Empenha-se em usar sua intimidação para aumentar seu bônus de ataque, pode usar sua risada
+                                        como ação livre e assim aplicar desvantagens em todos os ataques dos oponentes que falharem num teste de
+                                        sanidade contra sua intimidação.</li>
+                
+                                    <li>Aura do Abutre: Empenha-se em afetar negativamente os inimigos todos os oponentes dentro daquela área
+                                        contam como flanqueados, mas o usuário também.</li>
+                                  </list>
+                                </td>
+                              </tr>
+                            </table>
+                            
+                        </td>
+                      </tr>
+                    </table>
+                    <button id="verBrigao" onclick="mostrarMaisEMenos('brigao','verBrigao')">Ver brigão</button>
+                  </div>
+
+              <div class="img">                  
+                <img src="src/assets/images/luffy.png"
+                      style="margin-top: 10%;">
+              </div>
+            </div> 
+      </div>
+
+      <div class="step" id="sina">
+        <h2>Passo 2, Sina:</h2>
+          <p>O destino, um plano paralelo, similar a um deserto em escuridão total com pontos marcados no chão chamados de 
+              eventos. Seus eventos são decididos no momento  em que você nasce, mas nem sempre você pisa em todos. Alguns 
+              pontos somem ou se revelam com o tempo, alguns aparecem quando você conclui outros, e alguns te puxam para perto 
+              deles como um redemoínho. Alguns pontos do destino podem fazer com que todo o mapa do futuro simplesmente 
+              mude, alguns dos pontos obrigatórios simplesmente desaparecem, outros se revelam, partes da sua história 
+              são tão enterradas que nem fazem mais parte das suas memórias, esses pontos de mudança são chamados de sina e 
+              ocorrem quando um humano comum tem seu primeiro contato com o mágico.</p>
+
+          <p>O contato inicial com o mágico pode ser feito de diversas formas diferentes, cada forma impactando
+              seu destino de uma forma diferente. A forma como aconteceu seu contato primário com a magia te mostra como você vai
+              prosseguir sua jornada em um mundo mágico.</p>
+        <div class="row" >
+          <div>
+            <h2>Sinas:</h2>
+
+              <h3>Feiticeiro</h3>
+              <table class="hidden" id="feiticeiro" name="feiticeiro">
+                <tr>
+                  <td>                                      
+                    <i>O Despertar do Poder</i><br>
+                        Os feiticeiros, escolhidos pela própria feitiçaria, carregam em suas almas uma energia ancestral. Esse poder 
+                        desperta antes mesmo de sua consciência, como um rio subterrâneo que emerge com o toque do sobrenatural. O 
+                        primeiro contato é sempre marcante: um sussurro familiar do desconhecido, um vislumbre de algo maior. Muitos 
+                        dizem que os feiticeiros veem fantasmas antes de saber o que são.<br>
+                    <i>Aliados e Desafios</i><br>
+                        Feiticeiros raramente estão sozinhos. Quando seus poderes despertam, já há olhos atentos ao redor. Um mentor 
+                        pode guiá-lo nos primeiros passos, enquanto entidades como onis e yokais espreitam nas sombras. 
+                        Seres que buscam sacrificar os feiticeiros em busca de aumetar seu poder.<br>                     
+                    <i>A Arte da Feitiçaria</i><br>
+                        Dominar a feitiçaria é como decifrar pergaminhos antigos. O feiticeiro aprende a canalizar sua alma para 
+                        transformar energia pura em feitiço. Embora alguns ainda tentem lançar feitiços com força bruta, mas esse 
+                        método, além de proibido é ineficiente, consome mana em demasia e pode drenar a própria energia vital.
+                      <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verFeiticeiro" onclick="mostrarMaisEMenos('feiticeiro','verFeiticeiro')">Ver feiticeiro</button>
+
+              
+              <h3>Yokai</h3>
+              <table class="hidden" id="yokai" name="yokai">
+                <tr>
+                  <td>              
+                    <i>O Pacto Inevitável</i><br>
+                      Seres na fronteira entre o humano e o mágico, não escolhem seu destino seres nascidos de um pacto emergencial 
+                      irrevogável. Quando um mortal se une a uma entidade mística em carne, suas essências se entrelaçam, criando um novo 
+                      ser. Memórias, traços e energias se fundem, e o corpo híbrido pulsa com poder ancestral e mistério.<br>
+                    <i>A Sinfonia da Dualidade</i><br>
+                      Essa fusão é uma dança entre dois mundos: notas humanas e acordes mágicos. O yokai carrega lembranças de vidas 
+                      antigas e segredos do vento, enquanto o hospedeiro traz as emoções humanas: amores, dores, sonhos. Juntos, vibram 
+                      como um instrumento único, tocando a melodia do que foram e do que se tornam.<br>
+                    <i>Da Monstruosidade à Normalidade</i><br>
+                    No começo, a transformação é grotesca: corpos se contorcem, escamas surgem, olhos brilham com temor. As pessoas os 
+                    veem como aberrações. Com o tempo, surge o equilíbrio. Alguns yokais tornam-se mais humanos; outros, mais mágicos. 
+                    Surgem garras, asas, olhos hipnóticos. Cada forma conta uma história — uma cicatriz da dança entre os dois mundos.
+                    <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verYokai" onclick="mostrarMaisEMenos('yokai','verYokai')">Ver yokai</button>
+
+                
+              <h3>Protegido</h3> 
+              <table class="hidden" id="protegido" name="protegido">
+                <tr>
+                  <td>
+                    <i>O Juramento Ancestral</i><br>
+                      Os protegidos são herdeiros de pactos antigos, nascidos de um juramento feito entre seres mágicos e humanos. Ao sentir-se 
+                      em dívida, uma entidade pode vincular sua essência à linhagem de um protetor. Assim, os protegidos carregam uma herança 
+                      mágica, uma promessa que ecoa por gerações.<br>
+                    <i>Estrategistas e Guardiões</i><br>
+                      Mais do que receptores dessa magia, os protegidos são estrategistas. Leem sinais, estudam grimórios, antecipam perigos. A 
+                      feitiçaria pulsa em seus ossos, mas sua força está também na mente afiada e na habilidade de decidir quando agir ou se 
+                      ocultar.<br>
+                    <i> A Dança das Habilidades</i><br>
+                    Sua verdadeira força está na fusão: magia ancestral unida às próprias aptidões. Combinam combate e feitiço, cura e destruição, 
+                    criando sinergias únicas. Alguns ganham asas, outros olhos que veem o destino. São guardiões de uma linhagem, onde o sangue se 
+                    transforma em poder.
+                      <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verProtegido" onclick="mostrarMaisEMenos('protegido','verProtegido')">Ver protegido</button>
+
+
+              <h3>Mago</h3> 
+              <table class="hidden" id="mago" name="mago">
+                <tr>
+                  <td>    
+                    <i>O Despertar da Magia</i><br>
+                      Magos não tem sua magia vinda do seu corpo, sua magia não vem de seus corpos, mas descobriram como extrair magia do ambiente ao seu 
+                      redor a partir de símbolos, gestos, palavras e objetos encantados. São geralmente construtores: ferreiros, engenheiros, artesãos, 
+                      mestres na arte de canalizar poder em formas físicas.<br>
+                    <i>A Linguagem dos Artefatos Híbridos</i><br>
+                      Sua linguagem mágica evoluiu. Runas base impressas, hologramas e cajados com multifunções embutidas se tornaram instrumentos de 
+                      magia comuns. Símbolos antigos agora otimizam algoritmos, em comunidade invocam golems e conectam linhas temporais. Seus gestos 
+                      desenham feitiços no ar, como maestros entre mundos.<br>
+                    <i>Além do Laboratório, na Oficina e no Céu Virtual</i><br>
+                      As oficinas são templos de invenção, onde magia e tecnologia se fundem. Magos extraem poder de motores à vapor, hologramas e 
+                      eletricidade. Uns preferem o frio das engrenagens de cobre; outros, o caos das redes digitais clandestinas. Mas todos compartilham 
+                      a mesma essência: a busca por unir o místico ao científico.
+                      <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verMago" onclick="mostrarMaisEMenos('mago','verMago')">Ver mago</button>
+
+              
+              <h3>Invocador</h3> 
+              <table class="hidden" id="invocador" name="invocador">
+                <tr>
+                  <td>
+                      <i>A Ligação Intuitiva</i><br>
+                          Invocadores têm uma conexão natural com outras dimensões. Desde cedo, demonstram talento em chamar criaturas e objetos criando 
+                          pactos de mana, nunca lutando sozinhos. Invocam espíritos físicos e armas majestosas para equilibrar o combate com estratégia e 
+                          instinto.<br>
+                      <i>A Arte da Invocação</i><br>
+                          Mais que conjuradores de monstros, são apoiadores versáteis: criam barreiras, invocam alimento, abrem portais e reforçam aliados 
+                          com energia mágica. Cada invocação é uma tática, uma dança entre poder e precisão.<br>
+                      <i>Companheiros e Criaturas</i><br>
+                          Lobos gigantes, águias e até dragões os acompanham, não como ferramentas, mas como aliados leais. A relação é simbiótica: ambos 
+                          se fortalecem. Também trazem objetos encantados à existência — cada invocação é a extensão viva de seu carisma.
+                      <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verInvocador" onclick="mostrarMaisEMenos('invocador','verInvocador')">Ver invocador</button>
+
+
+              <h3>Bardo</h3>
+              <table class="hidden" id="bardo" name="bardo">
+                <tr>
+                  <td>
+                    <i>A Descoberta da Arte Mágica</i><br>
+                        Bardos descobrem que arte e magia são uma só. Música, dança, poesia e pintura canalizam poder místico, mas seu estilo livre e vibrante 
+                        é rejeitado pelas escolas tradicionais de magia, que preferem seriedade e rigor.<br>
+                    <i>A Fundação dos Bardos</i><br>
+                        Bardos criam sua própria escola, onde a magia é celebrada como performance. Em palcos repletos de luz e som, exploram sem limites, 
+                        encantando o mundo com sua criatividade mágica e ousada. Cada bardo manifesta sua magia de forma única, fortalecendo aliados, moldando 
+                        a energia com arte, e usando de seus atributos mágicos para codificar a linguagem da magia .<br>
+                    <i>A Reconciliação das Escolas</i><br>
+                        Durante uma guerra devastadora, os bardos apareceram, mesmo que de forma tardia, se mostrando essenciais com sua magia inspiradora e 
+                        suporte aos combatentes. Sua generosidade e bravura mudaram a percepção das escolas tradicionais. Assim nasceu uma aliança: não como 
+                        submissão, mas como parceria entre tradição e emoção. Agora os bardos tem o direito de organizar os professores e passar seus estudos a 
+                        diante ocupando uma cadeira no conselho das escolas.<br>                                    
+                      <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verBardo" onclick="mostrarMaisEMenos('bardo','verBardo')">Ver bardo</button>
+
+
+              <h3>Guerreiro</h3>
+              <table class="hidden" id="guerreiro" name="guerreiro">
+                <tr>
+                  <td>    
+                    <i>A Força do Corpo e da Magia</i><br>
+                        Guerreiros dominam o campo de batalha com força, técnica e magia. São especialistas no corpo a corpo, aprimorando seus corpos e armas 
+                        com encantamentos para ultrapassar limites humanos. Sua magia é extensão da disciplina física.<br>
+                    <i>Diversidade de Estilos</i><br>
+                        Cada guerreiro trilha um caminho único: cavaleiros unem combate e montarias ferozes; mestres de batalha são estrategistas adaptáveis; 
+                        guerreiros arcanos combinam espada e feitiço; bárbaros canalizam fúria para se tornarem forças da natureza. Todos seguem a perfeição 
+                        no combate.<br>
+                    <i>A Essência do Guerreiro</i><br>
+                        Seja pela disciplina, astúcia, magia ou brutalidade, guerreiros vivem para proteger, conquistar e evoluir. São fortalezas vivas, 
+                        pilares da guerra e símbolos de força em qualquer grupo.              
+                      <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verGuerreiro" onclick="mostrarMaisEMenos('guerreiro','verGuerreiro')">Ver guerreiro</button>
+
+
+              <h3>Ladino</h3>
+              <table class="hidden" id="ladino" name="ladino">
+                <tr>
+                  <td>       
+                      <i>Os Mestres das Sombras</i><br>
+                          Ladinos são especialistas em furtividade, engano e precisão. Evitam confrontos diretos, preferindo agir com astúcia e discrição. 
+                          Diz-se que onde há sombra, há um ladino — observando, esperando, prontos para agir com eficiência mortal.<br>
+                      <i>Honra Entre Trapaceiros</i><br>
+                          Embora vistos como traidores ou ladrões, muitos seguem um código de honra silencioso. Valorizam profundamente os laços de 
+                          confiança, protegendo seus aliados mais próximos como se fossem família. São frios por fora, mas surpreendem com gestos de lealdade 
+                          e cuidado.<br>
+                      <i>A Cultura dos Ladinos</i><br>
+                          Vivem à margem da sociedade, operando nas sombras e mantendo seus segredos. Adaptáveis e imprevisíveis, usam qualquer recurso para 
+                          sobreviver e vencer. São mestres da improvisação e, mesmo escondidos, moldam o mundo com suas ações invisíveis.
+                      <br><br>
+                  </td>
+                </tr>
+              </table>
+              <button id="verLadino" onclick="mostrarMaisEMenos('ladino','verLadino')">Ver ladino</button>
+          </div>
+
+          <div class="img">                  
+            <img src="src/assets/images/luffy.png"
+                style="margin-top: 15%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <a href=index.php>Voltar para a página principal</a>
+  </div>
+
+</body>
+
+</html>
